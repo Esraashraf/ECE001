@@ -1,0 +1,239 @@
+<html>
+ <head>
+     <title>Modern cryptography</title>
+ </head>
+ <body>
+     <h1>Modern cryptography:-</h1>
+     <h2>-Symmetric-key cryptography:</h2>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Symmetric_key_encryption.svg/250px-Symmetric_key_encryption.svg.png" 
+        alt="Symmetric-key cryptography, where a single key is used for encryption and decryption"> 
+      <p>Symmetric-key cryptography refers to encryption methods in which both the sender and receiver share the same key (or, less commonly, 
+            in which their keys are different, but related in an easily computable way). This was the only kind of encryption publicly known 
+            until June 1976.</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/International_Data_Encryption_Algorithm_InfoBox_Diagram.svg/220px-International_Data_Encryption_Algorithm_InfoBox_Diagram.svg.png" 
+        alt="One round (out of 8.5) of the IDEA cipher, used in most versions of PGP and OpenPGP compatible software for time-efficient encryption of messages"> 
+      <p>Symmetric key ciphers are implemented as either block ciphers or stream ciphers. A block cipher enciphers input in blocks of plaintext 
+          as opposed to individual characters, the input form used by a stream cipher. </p>
+      <p>The Data Encryption Standard (DES) and the Advanced Encryption Standard (AES) are block cipher designs that have been designated 
+          cryptography standards by the US government (though DES's designation was finally withdrawn after the AES was adopted). 
+          Despite its deprecation as an official standard, DES (especially its still-approved and much more secure triple-DES variant) 
+          remains quite popular; it is used across a wide range of applications, from ATM encryption to e-mail privacy and secure remote access. 
+          Many other block ciphers have been designed and released, with considerable variation in quality. Many, even some designed by capable 
+          practitioners, have been thoroughly broken, such as FEAL.</p>
+      <p>Stream ciphers, in contrast to the 'block' type, create an arbitrarily long stream of key material, which is combined with the plaintext 
+          bit-by-bit or character-by-character, somewhat like the one-time pad. In a stream cipher, the output stream is created based on 
+          a hidden internal state that changes as the cipher operates. That internal state is initially set up using the secret key material. 
+          RC4 is a widely used stream cipher. Block ciphers can be used as stream ciphers by generating blocks of a keystream (in place of 
+          a Pseudorandom number generator) and applying an XOR operation to each bit of the plaintext with each bit of the keystream.</p>
+      <p>Cryptographic hash functions are a third type of cryptographic algorithm. They take a message of any length as input, and output 
+          a short, fixed-length hash, which can be used in (for example) a digital signature. For good hash functions, an attacker cannot 
+          find two messages that produce the same hash. MD4 is a long-used hash function that is now broken; MD5, a strengthened variant 
+          of MD4, is also widely used but broken in practice. The US National Security Agency developed the Secure Hash Algorithm 
+          series of MD5-like hash functions: SHA-0 was a flawed algorithm that the agency withdrew; SHA-1 is widely deployed and 
+          more secure than MD5, but cryptanalysts have identified attacks against it; the SHA-2 family improves on SHA-1, 
+          but is vulnerable to clashes as of 2011; and the US standards authority thought it "prudent" from a security perspective 
+          to develop a new standard to "significantly improve the robustness of NIST's overall hash algorithm toolkit." 
+          Thus, a hash function design competition was meant to select a new U.S. national standard, to be called SHA-3, by 2012. 
+          The competition ended on October 2, 2012, when the NIST announced that Keccak would be the new SHA-3 hash algorithm. 
+          Unlike block and stream ciphers that are invertible, cryptographic hash functions produce a hashed output that cannot 
+          be used to retrieve the original input data. Cryptographic hash functions are used to verify the authenticity of data 
+          retrieved from an untrusted source or to add a layer of security. </p>
+      <p>Message authentication codes (MACs) are much like cryptographic hash functions, except that a secret key can be used to 
+          authenticate the hash value upon receipt; this additional complication blocks an attack scheme against bare digest algorithms, 
+          and so has been thought worth the effort.</p>
+     <h2>-Public-key cryptography:</h2>
+         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Public_key_encryption.svg/250px-Public_key_encryption.svg.png" 
+         alt="Public-key cryptography, where different keys are used for encryption and decryption.">
+         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/TLS_indicator_in_Firefox_34.png/250px-TLS_indicator_in_Firefox_34.png" 
+         alt="Padlock icon from the Firefox Web browser, which indicates that TLS, a public-key cryptography system, is in use."> 
+         <p>Symmetric-key cryptosystems use the same key for encryption and decryption of a message, although a message or group of messages 
+             can have a different key than others. A significant disadvantage of symmetric ciphers is the key management necessary to use them 
+             securely. Each distinct pair of communicating parties must, ideally, share a different key, and perhaps for each ciphertext 
+             exchanged as well. The number of keys required increases as the square of the number of network members, which very quickly 
+             requires complex key management schemes to keep them all consistent and secret. </p>
+         <p>In a groundbreaking 1976 paper, Whitfield Diffie and Martin Hellman proposed the notion of public-key (also, more generally, 
+             called asymmetric key) cryptography in which two different but mathematically related keys are used—a public key and a private key. 
+             A public key system is so constructed that calculation of one key (the 'private key') is computationally infeasible from the other 
+             (the 'public key'), even though they are necessarily related. Instead, both keys are generated secretly, as an interrelated pair. 
+             The historian David Kahn described public-key cryptography as "the most revolutionary new concept in the field since polyalphabetic 
+             substitution emerged in the Renaissance".</p>
+         <p>In public-key cryptosystems, the public key may be freely distributed, while its paired private key must remain secret. 
+             In a public-key encryption system, the public key is used for encryption, while the private or secret key is used for decryption. 
+             While Diffie and Hellman could not find such a system, they showed that public-key cryptography was indeed possible by presenting 
+             the Diffie–Hellman key exchange protocol, a solution that is now widely used in secure communications to allow two parties 
+             to secretly agree on a shared encryption key. The X.509 standard defines the most commonly used format for public key certificates.</p>
+         <p>Diffie and Hellman's publication sparked widespread academic efforts in finding a practical public-key encryption system. 
+             This race was finally won in 1978 by Ronald Rivest, Adi Shamir, and Len Adleman, whose solution has since become known 
+             as the RSA algorithm.</p>
+         <p>The Diffie–Hellman and RSA algorithms, in addition to being the first publicly known examples of high-quality public-key algorithms, 
+             have been among the most widely used. Other asymmetric-key algorithms include the Cramer–Shoup cryptosystem, ElGamal encryption, 
+             and various elliptic curve techniques.</p>
+         <p>A document published in 1997 by the Government Communications Headquarters (GCHQ), a British intelligence organization, 
+             revealed that cryptographers at GCHQ had anticipated several academic developments. Reportedly, around 1970, 
+             James H. Ellis had conceived the principles of asymmetric key cryptography. In 1973, Clifford Cocks invented a solution 
+             that was very similar in design rationale to RSA. In 1974, Malcolm J. Williamson is claimed to have developed 
+             the Diffie–Hellman key exchange.</p>
+         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Private_key_signing.svg/250px-Private_key_signing.svg.png" 
+         alt="In this example the message is only signed and not encrypted. 1) Alice signs a message with her private key. 2) Bob can verify that Alice sent the message and that the message has not been modified.">
+         <p>Public-key cryptography is also used for implementing digital signature schemes. A digital signature is reminiscent of an ordinary
+              signature; they both have the characteristic of being easy for a user to produce, but difficult for anyone else to forge.
+              Digital signatures can also be permanently tied to the content of the message being signed; they cannot then be 'moved' 
+              from one document to another, for any attempt will be detectable. In digital signature schemes, there are two algorithms: 
+              one for signing, in which a secret key is used to process the message (or a hash of the message, or both), and one for verification, 
+              in which the matching public key is used with the message to check the validity of the signature. RSA and DSA are two of 
+              the most popular digital signature schemes. Digital signatures are central to the operation of public key infrastructures 
+              and many network security schemes (e.g., SSL/TLS, many VPNs, etc.).</p>
+         <p>Public-key algorithms are most often based on the computational complexity of "hard" problems, often from number theory. 
+             For example, the hardness of RSA is related to the integer factorization problem, while Diffie–Hellman and DSA are related 
+             to the discrete logarithm problem. The security of elliptic curve cryptography is based on number theoretic problems involving 
+             elliptic curves. Because of the difficulty of the underlying problems, most public-key algorithms involve operations 
+             such as modular multiplication and exponentiation, which are much more computationally expensive 
+             than the techniques used in most block ciphers, especially with typical key sizes. As a result, 
+             public-key cryptosystems are commonly hybrid cryptosystems, in which a fast high-quality symmetric-key encryption algorithm 
+             is used for the message itself, while the relevant symmetric key is sent with the message, but encrypted using a public-key algorithm. 
+             Similarly, hybrid signature schemes are often used, in which a cryptographic hash function is computed, 
+             and only the resulting hash is digitally signed.</p>
+        <h3>Analysis and Comparison of Symmetric and Asymmetric Cryptography:</h3> 
+        <table style="width:100%">
+            <tr>
+              <th>S.No</th>
+              <th>Algorithm</th> 
+              <th>Key size</th>
+              <th>File size</th>
+              <th>Average Encryption Time(ms)</th>
+              <th>Average Decryption Time(ms)</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>AES</td>
+              <td>256</td>
+              <td>2048</td>
+              <td>302</td>
+              <td>299</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>DES</td>
+              <td>56</td>
+              <td>2048</td>
+              <td>305</td>
+              <td>316</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>RC4</td>
+              <td>64</td>
+              <td>2048</td>
+              <td>319</td>
+              <td>292</td>
+            </tr>
+             <tr>
+              <td>4</td>
+              <td>RSA</td>
+              <td>1024</td>
+              <td>2048</td>
+              <td>497</td>
+              <td>493</td>
+            </tr>
+             <tr>
+              <td>5</td>
+              <td>MD5</td>
+              <td>128</td>
+              <td>2048</td>
+              <td>475</td>
+              <td>461</td>
+            </tr>
+             <tr>
+              <td>6</td>
+              <td>NTRU</td>
+              <td>80</td>
+              <td>2048</td>
+              <td>331</td>
+              <td>305</td>
+            </tr>
+          </table>
+     <h2>-Cryptanalysis:</h2> 
+         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Enigma.jpg/220px-Enigma.jpg" 
+         alt="Variants of the Enigma machine, used by Germany's military and civil authorities from the late 1920s through World War II, implemented a complex electro-mechanical polyalphabetic cipher. Breaking and reading of the Enigma cipher at Poland's Cipher Bureau, for 7 years before the war, and subsequent decryption at Bletchley Park, was important to Allied victory."> 
+         <p>The goal of cryptanalysis is to find some weakness or insecurity in a cryptographic scheme, thus permitting its subversion 
+             or evasion.</p>
+         <p> It is a common misconception that every encryption method can be broken. In connection with his WWII work at Bell Labs, 
+             Claude Shannon proved that the one-time pad cipher is unbreakable, provided the key material is truly random, never reused, 
+             kept secret from all possible attackers, and of equal or greater length than the message. Most ciphers, 
+             apart from the one-time pad, can be broken with enough computational effort by brute force attack, 
+             but the amount of effort needed may be exponentially dependent on the key size, as compared to the effort needed to 
+             make use of the cipher. In such cases, effective security could be achieved if it is proven that the effort required 
+             (i.e., "work factor", in Shannon's terms) is beyond the ability of any adversary. 
+             This means it must be shown that no efficient method (as opposed to the time-consuming brute force method) 
+             can be found to break the cipher. Since no such proof has been found to date, the one-time-pad remains 
+             the only theoretically unbreakable cipher. Although well-implemented one-time-pad encryption cannot be broken, 
+             traffic analysis is still possible. </p>
+         <p>There are a wide variety of cryptanalytic attacks, and they can be classified in any of several ways. 
+             A common distinction turns on what Eve (an attacker) knows and what capabilities are available. 
+             In a ciphertext-only attack, Eve has access only to the ciphertext (good modern cryptosystems are usually effectively 
+             immune to ciphertext-only attacks). In a known-plaintext attack, Eve has access to a ciphertext and its corresponding 
+             plaintext (or to many such pairs). In a chosen-plaintext attack, Eve may choose a plaintext and learn its corresponding 
+             ciphertext (perhaps many times); an example is gardening, used by the British during WWII. In a chosen-ciphertext attack, 
+             Eve may be able to choose ciphertexts and learn their corresponding plaintexts. Finally in a man-in-the-middle attack 
+             Eve gets in between Alice (the sender) and Bob (the recipient), accesses and modifies the traffic and then forwards it 
+             to the recipient. Also important, often overwhelmingly so, are mistakes (generally in the design or use of one 
+             of the protocols involved). </p>
+         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/2008-09_Kaiserschloss_Kryptologen.JPG/220px-2008-09_Kaiserschloss_Kryptologen.JPG" alt="Poznań monument (center) to Polish cryptanalysts whose breaking of Germany's Enigma machine ciphers, beginning in 1932, altered the course of World War II">
+         <p>Cryptanalysis of symmetric-key ciphers typically involves looking for attacks against the block ciphers or stream ciphers 
+             that are more efficient than any attack that could be against a perfect cipher. For example, a simple brute force attack 
+             against DES requires one known plaintext and 255 decryptions, trying approximately half of the possible keys, 
+             to reach a point at which chances are better than even that the key sought will have been found. 
+             But this may not be enough assurance; a linear cryptanalysis attack against DES requires 243 known plaintexts 
+             (with their corresponding ciphertexts) and approximately 243 DES operations. This is a considerable improvement 
+             over brute force attacks. </p> 
+         <p>Public-key algorithms are based on the computational difficulty of various problems. 
+             The most famous of these are the difficulty of integer factorization of semiprimes and the difficulty of calculating 
+             discrete logarithms, both of which are not yet proven to be solvable in polynomial time using only 
+             a classical Turing-complete computer. Much public-key cryptanalysis concerns designing algorithms in P 
+             that can solve these problems, or using other technologies, such as quantum computers. For instance, 
+             the best-known algorithms for solving the elliptic curve-based version of discrete logarithm are much more time-consuming 
+             than the best-known algorithms for factoring, at least for problems of more or less equivalent size. 
+             Thus, other things being equal, to achieve an equivalent strength of attack resistance, factoring-based encryption 
+             techniques must use larger keys than elliptic curve techniques. For this reason, public-key cryptosystems based on 
+             elliptic curves have become popular since their invention in the mid-1990s</p>
+         <p>While pure cryptanalysis uses weaknesses in the algorithms themselves, 
+             other attacks on cryptosystems are based on actual use of the algorithms in real devices, 
+             and are called side-channel attacks. If a cryptanalyst has access to, for example, 
+             the amount of time the device took to encrypt a number of plaintexts or report an error in a password or PIN character, 
+             he may be able to use a timing attack to break a cipher that is otherwise resistant to analysis. 
+             An attacker might also study the pattern and length of messages to derive valuable information; 
+             this is known as traffic analysis and can be quite useful to an alert adversary. Poor administration of a cryptosystem, 
+             such as permitting too short keys, will make any system vulnerable, regardless of other virtues. 
+             Social engineering and other attacks against humans (e.g., bribery, extortion, blackmail, espionage, torture, ...) 
+             are usually employed due to being more cost-effective and feasible to perform in a reasonable amount of time compared 
+             to pure cryptanalysis by a high margin. </p>
+        <h2>-Cryptographic primitives:</h2>
+          <p>Much of the theoretical work in cryptography concerns cryptographic primitives—algorithms with basic cryptographic 
+              properties—and their relationship to other cryptographic problems. More complicated cryptographic tools are then built 
+              from these basic primitives. These primitives provide fundamental properties, which are used to develop more complex tools 
+              called cryptosystems or cryptographic protocols, which guarantee one or more high-level security properties. Note, however, 
+              that the distinction between cryptographic primitives and cryptosystems, is quite arbitrary; for example, the RSA algorithm 
+              is sometimes considered a cryptosystem, and sometimes a primitive. Typical examples of cryptographic primitives include 
+              pseudorandom functions, one-way functions, etc.</p>
+        <h2>-Cryptosystems:</h2> 
+           <p>One or more cryptographic primitives are often used to develop a more complex algorithm, called a cryptographic system, 
+               or cryptosystem. Cryptosystems (e.g., El-Gamal encryption) are designed to provide particular functionality 
+               (e.g., public key encryption) while guaranteeing certain security properties (e.g., chosen-plaintext attack (CPA) security 
+               in the random oracle model). Cryptosystems use the properties of the underlying cryptographic primitives to support 
+               the system's security properties. As the distinction between primitives and cryptosystems is somewhat arbitrary, 
+               a sophisticated cryptosystem can be derived from a combination of several more primitive cryptosystems. In many cases, 
+               the cryptosystem's structure involves back and forth communication among two or more parties in space 
+               (e.g., between the sender of a secure message and its receiver) or across time (e.g., cryptographically protected backup data). 
+               Such cryptosystems are sometimes called cryptographic protocols. </p>
+           <p>Some widely known cryptosystems include RSA encryption, Schnorr signature, El-Gamal encryption, PGP, etc. 
+               More complex cryptosystems include electronic cash systems, signcryption systems, etc. Some more 'theoretical'
+               [clarification needed] cryptosystems include interactive proof systems, (like zero-knowledge proofs), 
+               systems for secret sharing, etc. </p>
+        <h2>-Lightweight cryptography:</h2>  
+          <p>Lightweight cryptography (LWC) concerns cryptographic algorithms developed for a strictly constrained environment. 
+              The growth of Internet of Things (IoT) has spiked research into the development of lightweight algorithms 
+              that are better suited for the environment. An IoT environment requires strict constraints on power consumption, 
+              processing power, and security. Algorithms such as PRESENT, AES, and SPECK are examples of the many LWC algorithms 
+              that have been developed to achieve the standard set by the National Institute of Standards and Technology.</p>
+ </body>
+</html>

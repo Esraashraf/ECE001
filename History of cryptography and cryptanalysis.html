@@ -1,0 +1,126 @@
+<html>
+  <head>
+    <title> History of Cryptography and Cryptanalysis </title>
+  </head>
+  <body>
+    <h1> History of cryptography and cryptanalysis:-</h1>
+     <p>Before the modern era, cryptography focused on message confidentiality (i.e., encryption)—conversion of messages 
+         from a comprehensible form into an incomprehensible one and back again at the other end, rendering it unreadable by interceptors 
+         or eavesdroppers without secret knowledge (namely the key needed for decryption of that message). Encryption attempted to ensure 
+         secrecy in communications, such as those of spies, military leaders, and diplomats. In recent decades, the field has expanded 
+         beyond confidentiality concerns to include techniques for message integrity checking, sender/receiver identity authentication, 
+         digital signatures, interactive proofs and secure computation, among others. </p>
+    <h2>-Classic cryptography:</h2>
+     <p> The main classical cipher types are transposition ciphers, which rearrange the order of letters in a message 
+         (e.g., 'hello world' becomes 'ehlol owrdl' in a trivially simple rearrangement scheme), and substitution ciphers, 
+         which systematically replace letters or groups of letters with other letters or groups of letters (e.g., 'fly at once' 
+         becomes 'gmz bu podf' by replacing each letter with the one following it in the Latin alphabet). 
+         Simple versions of either have never offered much confidentiality from enterprising opponents. 
+         An early substitution cipher was the Caesar cipher, in which each letter in the plaintext was replaced by a letter some fixed 
+         number of positions further down the alphabet. Suetonius reports that Julius Caesar used it with a shift of three to communicate 
+         with his generals. Atbash is an example of an early Hebrew cipher. The earliest known use of cryptography is some carved ciphertext 
+         on stone in Egypt (ca 1900 BCE), but this may have been done for the amusement of literate observers rather than as a way of 
+         concealing information. </p>
+     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Skytala%26EmptyStrip-Shaded.png/220px-Skytala%26EmptyStrip-Shaded.png" 
+     alt="Reconstructed ancient Greek scytale, an early cipher device"> 
+     <p> The Greeks of Classical times are said to have known of ciphers (e.g., the scytale transposition cipher claimed to have been 
+         used by the Spartan military). Steganography (i.e., hiding even the existence of a message so as to keep it confidential) was 
+         also first developed in ancient times. An early example, from Herodotus, was a message tattooed on a slave's shaved head and concealed 
+         under the regrown hair. More modern examples of steganography include the use of invisible ink, microdots, and digital watermarks to 
+         conceal information.  </p>
+     <p>In India, the 2000-year-old Kamasutra of Vātsyāyana speaks of two different kinds of ciphers called Kautiliyam and Mulavediya. 
+         In the Kautiliyam, the cipher letter substitutions are based on phonetic relations, such as vowels becoming consonants. 
+         In the Mulavediya, the cipher alphabet consists of pairing letters and using the reciprocal ones.</p>
+     <p>In Sassanid Persia, there were two secret scripts, according to the Muslim author Ibn al-Nadim: the šāh-dabīrīya 
+         (literally "King's script") which was used for official correspondence, and the rāz-saharīya which was used to communicate 
+         secret messages with other countries.</p>
+     <p>David Kahn notes in The Codebreakers that modern cryptology originated among the Arabs, the first people to systematically 
+         document cryptanalytic methods. Al-Khalil (717–786) wrote the Book of Cryptographic Messages, which contains the first use of 
+         permutations and combinations to list all possible Arabic words with and without vowels.</p>
+     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Al-kindi_cryptographic.png/220px-Al-kindi_cryptographic.png" 
+     alt="First page of a book by Al-Kindi which discusses encryption of messages"> 
+     <p>Ciphertexts produced by a classical cipher (and some modern ciphers) will reveal statistical information about the plaintext, 
+         and that information can often be used to break the cipher. After the discovery of frequency analysis, by the Arab mathematician 
+         and polymath Al-Kindi (also known as Alkindus) in the 9th century, nearly all such ciphers could be broken by an informed attacker. 
+         Such classical ciphers still enjoy popularity today, though mostly as puzzles. Al-Kindi wrote a book on cryptography 
+         entitled Risalah fi Istikhraj al-Mu'amma (Manuscript for the Deciphering Cryptographic Messages), which described the first known
+         use of frequency analysis and cryptanalysis techniques. An important contribution of Ibn Adlan (1187–1268) was on sample size for 
+         use of frequency analysis.</p>
+     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/16th_century_French_cypher_machine_in_the_shape_of_a_book_with_arms_of_Henri_II.jpg/220px-16th_century_French_cypher_machine_in_the_shape_of_a_book_with_arms_of_Henri_II.jpg" alt="16th-century book-shaped French cipher machine, with arms of Henri II of France">
+     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Encoded_letter_of_Gabriel_Luetz_d_Aramon_after_1546_with_partial_deciphering.jpg/220px-Encoded_letter_of_Gabriel_Luetz_d_Aramon_after_1546_with_partial_deciphering.jpg" alt="Enciphered letter from Gabriel de Luetz d'Aramon, French Ambassador to the Ottoman Empire, after 1546, with partial decipherment"> 
+     <p>Language letter frequencies may offer little help for some extended historical encryption techniques such as homophonic cipher 
+         that tend to flatten the frequency distribution. For those ciphers, language letter group (or n-gram) frequencies may provide 
+         an attack.</p>
+     <p>Essentially all ciphers remained vulnerable to cryptanalysis using the frequency analysis technique until the development of 
+         the polyalphabetic cipher. While it was known to Al-Kindi to some extent, it was first clearly described in the work of 
+         Al-Qalqashandi (1355–1418), based on the earlier work of Ibn al-Durayhim (1312–1359), describing a polyalphabetic cipher 
+         in which each plaintext letter is assigned more than one substitute. It was later also described by Leon Battista Alberti 
+         around the year 1467, though there is some indication that Alberti's method was to use different ciphers 
+         (i.e., substitution alphabets) for various parts of a message (perhaps for each successive plaintext letter at the limit). 
+         He also invented what was probably the first automatic cipher device, a wheel that implemented a partial realization of his invention. 
+         In the Vigenère cipher, a polyalphabetic cipher, encryption uses a key word, which controls letter substitution depending on 
+         which letter of the key word is used. In the mid-19th century Charles Babbage showed that the Vigenère cipher was vulnerable to 
+         Kasiski examination, but this was first published about ten years later by Friedrich Kasiski.</p>
+     <p>Although frequency analysis can be a powerful and general technique against many ciphers, encryption has still often been effective 
+         in practice, as many a would-be cryptanalyst was unaware of the technique. Breaking a message without using frequency analysis 
+         essentially required knowledge of the cipher used and perhaps of the key involved, thus making espionage, bribery, burglary, 
+         defection, etc., more attractive approaches to the cryptanalytically uninformed. It was finally explicitly recognized 
+         in the 19th century that secrecy of a cipher's algorithm is not a sensible nor practical safeguard of message security; 
+         in fact, it was further realized that any adequate cryptographic scheme (including ciphers) should remain secure even if the adversary 
+         fully understands the cipher algorithm itself. Security of the key used should alone be sufficient for a good cipher 
+         to maintain confidentiality under an attack. This fundamental principle was first explicitly stated in 1883 by Auguste Kerckhoffs 
+         and is generally called Kerckhoffs's Principle; alternatively and more bluntly, it was restated by Claude Shannon, 
+         the inventor of information theory and the fundamentals of theoretical cryptography, as Shannon's Maxim—'the enemy knows the system'. </p>
+     <p>Different physical devices and aids have been used to assist with ciphers. One of the earliest may have been the scytale of ancient Greece, 
+         a rod supposedly used by the Spartans as an aid for a transposition cipher. In medieval times, other aids were invented such as 
+         the cipher grille, which was also used for a kind of steganography. With the invention of polyalphabetic ciphers came more 
+         sophisticated aids such as Alberti's own cipher disk, Johannes Trithemius' tabula recta scheme, and Thomas Jefferson's wheel 
+         cypher (not publicly known, and reinvented independently by Bazeries around 1900). Many mechanical encryption/decryption devices
+         were invented early in the 20th century, and several patented, among them rotor machines—famously including the Enigma machine 
+         used by the German government and military from the late 1920s and during World War II. The ciphers implemented by better quality 
+         examples of these machine designs brought about a substantial increase in cryptanalytic difficulty after WWI.</p>
+    <h2>-Computer era:</h2>
+     <p>Prior to the early 20th century, cryptography was mainly concerned with linguistic and lexicographic patterns. 
+        Since then the emphasis has shifted, and cryptography now makes extensive use of mathematics, including aspects of information theory, 
+        computational complexity, statistics, combinatorics, abstract algebra, number theory, and finite mathematics generally. 
+        Cryptography is also a branch of engineering, but an unusual one since it deals with active, intelligent, and malevolent opposition; 
+        other kinds of engineering (e.g., civil or chemical engineering) need deal only with neutral natural forces. There is also active 
+        research examining the relationship between cryptographic problems and quantum physics. </p>
+     <p>Just as the development of digital computers and electronics helped in cryptanalysis, it made possible much more complex ciphers. 
+         Furthermore, computers allowed for the encryption of any kind of data representable in any binary format, unlike classical ciphers 
+         which only encrypted written language texts; this was new and significant. Computer use has thus supplanted linguistic cryptography, 
+         both for cipher design and cryptanalysis. Many computer ciphers can be characterized by their operation on binary bit sequences 
+         (sometimes in groups or blocks), unlike classical and mechanical schemes, which generally manipulate traditional characters 
+         (i.e., letters and digits) directly. However, computers have also assisted cryptanalysis, which has compensated to some extent 
+         for increased cipher complexity. Nonetheless, good modern ciphers have stayed ahead of cryptanalysis; it is typically the case 
+         that use of a quality cipher is very efficient (i.e., fast and requiring few resources, such as memory or CPU capability), 
+         while breaking it requires an effort many orders of magnitude larger, and vastly larger than that required for any classical cipher, 
+         making cryptanalysis so inefficient and impractical as to be effectively impossible. </p>
+    <h2>-Advent of modern cryptography:</h2>
+      <p>Cryptanalysis of the new mechanical devices proved to be both difficult and laborious. In the United Kingdom, cryptanalytic 
+          efforts at Bletchley Park during WWII spurred the development of more efficient means for carrying out repetitious tasks. 
+          This culminated in the development of the Colossus, the world's first fully electronic, digital, programmable computer, 
+          which assisted in the decryption of ciphers generated by the German Army's Lorenz SZ40/42 machine.</p>
+      <p>Extensive open academic research into cryptography is relatively recent; it began only in the mid-1970s. In recent times, 
+          IBM personnel designed the algorithm that became the Federal (i.e., US) Data Encryption Standard; Whitfield Diffie 
+          and Martin Hellman published their key agreement algorithm; and the RSA algorithm was published 
+          in Martin Gardner's Scientific American column. Since then, cryptography has become a widely used tool in communications, 
+          computer networks, and computer security generally. </p>
+      <p>Some modern cryptographic techniques can only keep their keys secret if certain mathematical problems are intractable, 
+          such as the integer factorization or the discrete logarithm problems, so there are deep connections with abstract mathematics. 
+          There are very few cryptosystems that are proven to be unconditionally secure. The one-time pad is one, and was proven to be 
+          so by Claude Shannon. There are a few important algorithms that have been proven secure under certain assumptions. For example, 
+          the infeasibility of factoring extremely large integers is the basis for believing that RSA is secure, and some other systems, 
+          but even so, proof of unbreakability is unavailable since the underlying mathematical problem remains open. In practice, 
+          these are widely used, and are believed unbreakable in practice by most competent observers. There are systems similar to RSA, 
+          such as one by Michael O. Rabin that are provably secure provided factoring n = pq is impossible; it is quite unusable in practice. 
+          The discrete logarithm problem is the basis for believing some other cryptosystems are secure, and again, there are related, 
+          less practical systems that are provably secure relative to the solvability or insolvability discrete log problem.</p>
+      <p>As well as being aware of cryptographic history, cryptographic algorithm and system designers must also sensibly consider probable 
+          future developments while working on their designs. For instance, continuous improvements in computer processing power have increased 
+          the scope of brute-force attacks, so when specifying key lengths, the required key lengths are similarly advancing. The potential 
+          effects of quantum computing are already being considered by some cryptographic system designers developing post-quantum cryptography; 
+          the announced imminence of small implementations of these machines may be making the need for preemptive caution rather more than 
+          merely speculative.</p>
+    </body>
+</html>
